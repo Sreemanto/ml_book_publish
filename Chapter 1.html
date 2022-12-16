@@ -1,0 +1,1170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 1 &#8212; The Machine Learning Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 2" href="Chapter%202.html" />
+    <link rel="prev" title="This is your coursebook" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Machine Learning Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    This is your coursebook
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%202.html">
+   Chapter 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%203.html">
+   Chapter 3
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Chapter 1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FChapter 1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Chapter 1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-1-1-mark">
+   Task 1 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-1-mark">
+   Task 2 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-1-mark">
+   Task 3 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-1-mark">
+   Task 4 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-1-mark">
+   Task 5 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-6-1-mark">
+   Task 6 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-7-1-mark">
+   Task 7 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-cannot-possible-see-any-outliers-from-the-boxplot-and-the-line-plot-maybe-have-to-check-the-z-score">
+     Note : Cannot possible see any outliers from the boxplot and the line plot maybe have to check the z-score
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-8-1-mark">
+   Task 8 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cannot-see-any-outliers-as-the-max-and-min-values-are-within-3-and-3">
+     Cannot see any outliers as the max and min values are within +3 and -3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-9-1-mark">
+   Task 9 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-we-do-see-4-outliers-from-the-box-plot">
+     Now we do see 4 outliers from the box plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-10-1-mark">
+   Task 10 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yes-we-do-see-that-the-some-outliers-are-now-removed-as-expected-the-count-of-the-dataframe-recedded-by-4-and-the-output-of-the-dataframe-was-lowered-by-4-rows-as-expected">
+     Yes we do see that the some outliers are now removed. As expected the count of the dataframe recedded by 4 and the output of the dataframe was lowered by 4 rows as expected
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapter 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-1-1-mark">
+   Task 1 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-1-mark">
+   Task 2 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-1-mark">
+   Task 3 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-1-mark">
+   Task 4 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-1-mark">
+   Task 5 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-6-1-mark">
+   Task 6 (1 mark)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-7-1-mark">
+   Task 7 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note-cannot-possible-see-any-outliers-from-the-boxplot-and-the-line-plot-maybe-have-to-check-the-z-score">
+     Note : Cannot possible see any outliers from the boxplot and the line plot maybe have to check the z-score
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-8-1-mark">
+   Task 8 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cannot-see-any-outliers-as-the-max-and-min-values-are-within-3-and-3">
+     Cannot see any outliers as the max and min values are within +3 and -3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-9-1-mark">
+   Task 9 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-we-do-see-4-outliers-from-the-box-plot">
+     Now we do see 4 outliers from the box plot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-10-1-mark">
+   Task 10 (1 mark)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#yes-we-do-see-that-the-some-outliers-are-now-removed-as-expected-the-count-of-the-dataframe-recedded-by-4-and-the-output-of-the-dataframe-was-lowered-by-4-rows-as-expected">
+     Yes we do see that the some outliers are now removed. As expected the count of the dataframe recedded by 4 and the output of the dataframe was lowered by 4 rows as expected
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-1">
+<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Permalink to this headline">#</a></h1>
+<p>Complete the tasks listed below. You can submit the completed lab until 11:59 PM in the night.</p>
+<section id="task-1-1-mark">
+<h2>Task 1 (1 mark)<a class="headerlink" href="#task-1-1-mark" title="Permalink to this headline">#</a></h2>
+<p>A file named <strong>Lincoln.txt</strong> is included in the folder containing this Notebook. Open the file and write some traditional Python code (one that uses nested <em>for</em> loops) to extract all the words from this file into a list named <strong>word_list</strong>. The list should only include the words from the file in lower case (punctuation, hyphens, new line characters etc should not be included). A portion of the output is shown below for your convenience:</p>
+<p><u>Hint:</u> You can use a very short snippet of code exploiting Python’s regular expression <strong>re</strong> module, which would make your task a whole lot easier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">lower</span><span class="p">(</span><span class="n">match_obj</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This function is use to convert the uppercase character to lower case character</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">char_elem</span> <span class="o">=</span> <span class="n">match_obj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">char_elem</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">char_elem</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">char_elem</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+  
+
+
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/Lincoln.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        
+        <span class="c1">#regex to change the worde to lower case</span>
+        <span class="n">new_line</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-zA-Z]&quot;</span><span class="p">,</span><span class="n">lower</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+        
+        <span class="c1">#spliting the line in to words on the basis of &quot; &quot;</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">new_line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        
+        <span class="c1">#looping through each word to remove the punctuation and copying them in a list</span>
+        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+            <span class="c1">#regex to get rid of punctuations</span>
+            <span class="n">new_word</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z0-9\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+            <span class="n">word_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_word</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-2-1-mark">
+<h2>Task 2 (1 mark)<a class="headerlink" href="#task-2-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Do the same you did in Task 1 above, this time around using a list comprehension instead.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/Lincoln.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+
+        <span class="c1">#regex to change the worde to lower case</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-zA-Z]&quot;</span><span class="p">,</span><span class="n">lower</span><span class="p">,</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        
+        <span class="c1">#list comprehnsion</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z0-9\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span>
+        
+        <span class="n">word_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-3-1-mark">
+<h2>Task 3 (1 mark)<a class="headerlink" href="#task-3-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Write code that creates a dictionary named <strong>counts</strong> which stores the counts of all the words included in the list <strong>word_list</strong>. A portion of the output is shown below for your convenience:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">word_list</span><span class="p">))</span>
+<span class="n">counts</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;four&#39;: 1,
+ &#39;score&#39;: 1,
+ &#39;and&#39;: 6,
+ &#39;seven&#39;: 1,
+ &#39;years&#39;: 1,
+ &#39;ago&#39;: 1,
+ &#39;our&#39;: 2,
+ &#39;fathers&#39;: 1,
+ &#39;brought&#39;: 1,
+ &#39;forth&#39;: 1,
+ &#39;on&#39;: 2,
+ &#39;this&#39;: 4,
+ &#39;continent&#39;: 1,
+ &#39;a&#39;: 7,
+ &#39;new&#39;: 2,
+ &#39;nation&#39;: 5,
+ &#39;conceived&#39;: 2,
+ &#39;in&#39;: 4,
+ &#39;liberty&#39;: 1,
+ &#39;dedicated&#39;: 4,
+ &#39;to&#39;: 8,
+ &#39;the&#39;: 11,
+ &#39;proposition&#39;: 1,
+ &#39;that&#39;: 13,
+ &#39;all&#39;: 1,
+ &#39;men&#39;: 2,
+ &#39;are&#39;: 3,
+ &#39;created&#39;: 1,
+ &#39;equal&#39;: 1,
+ &#39;&#39;: 9,
+ &#39;now&#39;: 1,
+ &#39;we&#39;: 10,
+ &#39;engaged&#39;: 1,
+ &#39;great&#39;: 3,
+ &#39;civil&#39;: 1,
+ &#39;war&#39;: 2,
+ &#39;testing&#39;: 1,
+ &#39;whether&#39;: 1,
+ &#39;or&#39;: 2,
+ &#39;any&#39;: 1,
+ &#39;so&#39;: 2,
+ &#39;can&#39;: 5,
+ &#39;long&#39;: 2,
+ &#39;endure&#39;: 1,
+ &#39;met&#39;: 1,
+ &#39;battlefield&#39;: 1,
+ &#39;of&#39;: 5,
+ &#39;have&#39;: 5,
+ &#39;come&#39;: 1,
+ &#39;dedicate&#39;: 2,
+ &#39;portion&#39;: 1,
+ &#39;field&#39;: 1,
+ &#39;as&#39;: 1,
+ &#39;final&#39;: 1,
+ &#39;resting&#39;: 1,
+ &#39;place&#39;: 1,
+ &#39;for&#39;: 5,
+ &#39;those&#39;: 1,
+ &#39;who&#39;: 3,
+ &#39;here&#39;: 8,
+ &#39;gave&#39;: 2,
+ &#39;their&#39;: 1,
+ &#39;lives&#39;: 1,
+ &#39;might&#39;: 1,
+ &#39;live&#39;: 1,
+ &#39;it&#39;: 5,
+ &#39;is&#39;: 3,
+ &#39;altogether&#39;: 1,
+ &#39;fitting&#39;: 1,
+ &#39;proper&#39;: 1,
+ &#39;should&#39;: 1,
+ &#39;do&#39;: 1,
+ &#39;but&#39;: 2,
+ &#39;larger&#39;: 1,
+ &#39;sense&#39;: 1,
+ &#39;not&#39;: 5,
+ &#39;consecrate&#39;: 1,
+ &#39;hallow&#39;: 1,
+ &#39;ground&#39;: 1,
+ &#39;brave&#39;: 1,
+ &#39;living&#39;: 2,
+ &#39;dead&#39;: 3,
+ &#39;struggled&#39;: 1,
+ &#39;consecrated&#39;: 1,
+ &#39;far&#39;: 2,
+ &#39;above&#39;: 1,
+ &#39;poor&#39;: 1,
+ &#39;power&#39;: 1,
+ &#39;add&#39;: 1,
+ &#39;detract&#39;: 1,
+ &#39;world&#39;: 1,
+ &#39;will&#39;: 1,
+ &#39;little&#39;: 1,
+ &#39;note&#39;: 1,
+ &#39;nor&#39;: 1,
+ &#39;remember&#39;: 1,
+ &#39;what&#39;: 2,
+ &#39;say&#39;: 1,
+ &#39;never&#39;: 1,
+ &#39;forget&#39;: 1,
+ &#39;they&#39;: 3,
+ &#39;did&#39;: 1,
+ &#39;us&#39;: 3,
+ &#39;rather&#39;: 2,
+ &#39;be&#39;: 2,
+ &#39;unfinished&#39;: 1,
+ &#39;work&#39;: 1,
+ &#39;which&#39;: 2,
+ &#39;fought&#39;: 1,
+ &#39;thus&#39;: 1,
+ &#39;nobly&#39;: 1,
+ &#39;advanced&#39;: 1,
+ &#39;task&#39;: 1,
+ &#39;remaining&#39;: 1,
+ &#39;before&#39;: 1,
+ &#39;from&#39;: 2,
+ &#39;these&#39;: 2,
+ &#39;honored&#39;: 1,
+ &#39;take&#39;: 1,
+ &#39;increased&#39;: 1,
+ &#39;devotion&#39;: 2,
+ &#39;cause&#39;: 1,
+ &#39;last&#39;: 1,
+ &#39;full&#39;: 1,
+ &#39;measure&#39;: 1,
+ &#39;highly&#39;: 1,
+ &#39;resolve&#39;: 1,
+ &#39;shall&#39;: 3,
+ &#39;died&#39;: 1,
+ &#39;vain&#39;: 1,
+ &#39;under&#39;: 1,
+ &#39;god&#39;: 1,
+ &#39;birth&#39;: 1,
+ &#39;freedom&#39;: 1,
+ &#39;government&#39;: 1,
+ &#39;people&#39;: 3,
+ &#39;by&#39;: 1,
+ &#39;perish&#39;: 1,
+ &#39;earth&#39;: 1}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-4-1-mark">
+<h2>Task 4 (1 mark)<a class="headerlink" href="#task-4-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Three lists are provided below for you to work with.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>numbers = [1, 2, 3]
+letters = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+longest = list(range(5))
+</pre></div>
+</div>
+<p>Connect the lists in such a way that the output looks as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">zip_longest</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="n">longest</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    
+    
+<span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">zip_longest</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">letters</span><span class="p">,</span><span class="n">longest</span><span class="p">))</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, &#39;a&#39;, 0), (2, &#39;b&#39;, 1), (3, &#39;c&#39;, 2), (None, None, 3), (None, None, 4)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-5-1-mark">
+<h2>Task 5 (1 mark)<a class="headerlink" href="#task-5-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Read the file <strong>visit_data.csv</strong> into a Dataframe <strong>df</strong>. Figure out which of the columns in the Dataframe have duplicated values. Report your result as follows:</p>
+<p>Use only two lines of code to accomplish the above. Do this first using just the <strong>print</strong> function, then the <strong>%</strong> operator with the <strong>print</strong> function, and finally the <strong>format</strong> method with the <strong>print</strong> function.</p>
+<p><u>Hints</u>: You can use <strong>map</strong> and <strong>str</strong> in conjunction with the <strong>join</strong> method. To make the text bold font, you can use <code class="docutils literal notranslate"><span class="pre">'\033[1m'</span></code> and <code class="docutils literal notranslate"><span class="pre">'\033[0m'</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/visit_data.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>email</th>
+      <th>gender</th>
+      <th>ip_address</th>
+      <th>nb_visits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Sonny</td>
+      <td>Dahl</td>
+      <td>sdahl0@mysql.com</td>
+      <td>Male</td>
+      <td>135.36.96.183</td>
+      <td>1225.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>dhoovart1@hud.gov</td>
+      <td>NaN</td>
+      <td>237.165.194.143</td>
+      <td>919.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Gar</td>
+      <td>Armal</td>
+      <td>garmal2@technorati.com</td>
+      <td>NaN</td>
+      <td>166.43.137.224</td>
+      <td>271.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Chiarra</td>
+      <td>Nulty</td>
+      <td>cnulty3@newyorker.com</td>
+      <td>NaN</td>
+      <td>139.98.137.108</td>
+      <td>1002.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>sleaver4@elegantthemes.com</td>
+      <td>NaN</td>
+      <td>46.117.117.27</td>
+      <td>2434.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You will find that there are duplicates in <strong>First Name</strong>, <strong>Last Name</strong>, <strong>Gender</strong>, and <strong>Nb Visits</strong>. Do you find these abnormal? Explain your reasoning in the cell below.</p>
+<p><strong>Reasoning:</strong> …</p>
+</section>
+<section id="task-6-1-mark">
+<h2>Task 6 (1 mark)<a class="headerlink" href="#task-6-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Save the number of rows in the Dataframe as <strong>size_prev</strong>. Then drop any missing values from the column <strong>nb_visits</strong>, save the resulting Dataframe, and again save the number of rows as <strong>size_after</strong>. Report the size of the resulting Dataframe as follows using <strong>print</strong> in conjunction with <strong>format</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">size_prev</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#checking the missing values</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>id              0
+first_name    296
+last_name     296
+email           0
+gender        505
+ip_address      0
+nb_visits      26
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;nb_visits&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">size_after</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size of the previous data was - </span><span class="si">{}</span><span class="s2"> rows and the size of the new one is - </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span>
+                                                                 <span class="nb">format</span><span class="p">(</span><span class="n">size_prev</span><span class="p">,</span><span class="n">size_after</span><span class="p">))</span>
+                                                                 
+                                                                 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Size of the previous data was - 1000 rows and the size of the new one is - 974
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-7-1-mark">
+<h2>Task 7 (1 mark)<a class="headerlink" href="#task-7-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Import the necessary plotting libraries and visualize any outliers for the column <strong>nb_visits</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">nb_visits</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter 1_27_0.png" src="_images/Chapter 1_27_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">nb_visits</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter 1_28_0.png" src="_images/Chapter 1_28_0.png" />
+</div>
+</div>
+<section id="note-cannot-possible-see-any-outliers-from-the-boxplot-and-the-line-plot-maybe-have-to-check-the-z-score">
+<h3>Note : Cannot possible see any outliers from the boxplot and the line plot maybe have to check the z-score<a class="headerlink" href="#note-cannot-possible-see-any-outliers-from-the-boxplot-and-the-line-plot-maybe-have-to-check-the-z-score" title="Permalink to this headline">#</a></h3>
+<p>Did you see any outliers?</p>
+<p><strong>Answer:</strong> …</p>
+</section>
+</section>
+<section id="task-8-1-mark">
+<h2>Task 8 (1 mark)<a class="headerlink" href="#task-8-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Now filter the Dataframe based on the z-score for the column <strong>nb_visits</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_score</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">nb_visits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_score</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.7888757591039082
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_score</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.785241741533329
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_without_outliers</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">z_score</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">z_score</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">3</span><span class="p">)]</span>
+<span class="n">df_without_outliers</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(974, 7)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Were any outliers removed?</p>
+<p><strong>Answer:</strong> …</p>
+<section id="cannot-see-any-outliers-as-the-max-and-min-values-are-within-3-and-3">
+<h3>Cannot see any outliers as the max and min values are within +3 and -3<a class="headerlink" href="#cannot-see-any-outliers-as-the-max-and-min-values-are-within-3-and-3" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="task-9-1-mark">
+<h2>Task 9 (1 mark)<a class="headerlink" href="#task-9-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Let’s introduce some outliers into the column <strong>nb_visits</strong>. Simply multiply the first five values for this column with 10 and once again visualize any outliers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;nb_visits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;nb_visits&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;nb_visits&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     6125.0
+1     4595.0
+2     1355.0
+3     5010.0
+4    12170.0
+5     2255.0
+Name: nb_visits, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">nb_visits</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter 1_43_0.png" src="_images/Chapter 1_43_0.png" />
+</div>
+</div>
+<p>Did you see any outliers?</p>
+<p><strong>Answer:</strong> …</p>
+<section id="now-we-do-see-4-outliers-from-the-box-plot">
+<h3>Now we do see 4 outliers from the box plot<a class="headerlink" href="#now-we-do-see-4-outliers-from-the-box-plot" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="task-10-1-mark">
+<h2>Task 10 (1 mark)<a class="headerlink" href="#task-10-1-mark" title="Permalink to this headline">#</a></h2>
+<p>Finally, filter the Dataframe once again based on the z-score for the updated <strong>nb_visits</strong> column and save the resulting Dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z_score</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">nb_visits</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_without_outliers</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">z_score</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">z_score</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">3</span><span class="p">)]</span>
+<span class="n">df_without_outliers</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(970, 7)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Were any outliers removed? If yes, how many? Did the number of outliers removed agree with the visualization in Task 7 above? Did you get the same number of outliers you were expecting? If not, why?</p>
+<p><strong>Answer:</strong> …</p>
+<section id="yes-we-do-see-that-the-some-outliers-are-now-removed-as-expected-the-count-of-the-dataframe-recedded-by-4-and-the-output-of-the-dataframe-was-lowered-by-4-rows-as-expected">
+<h3>Yes we do see that the some outliers are now removed. As expected the count of the dataframe recedded by 4 and the output of the dataframe was lowered by 4 rows as expected<a class="headerlink" href="#yes-we-do-see-that-the-some-outliers-are-now-removed-as-expected-the-count-of-the-dataframe-recedded-by-4-and-the-output-of-the-dataframe-was-lowered-by-4-rows-as-expected" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">This is your coursebook</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter%202.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sreemanta Kesh<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
